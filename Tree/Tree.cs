@@ -9,46 +9,53 @@ namespace Tree
 {
     internal class Tree
     {
-        List<Node> tree;
-        Node node;
-        int c; 
-        
+        Node root;
 
-        public Tree()
+        public Node getRoot()
         {
-            tree = new List<Node>();
-            c = 0;
+            return root;
         }
 
-        public void addElement(int data)
+        public Tree(int data)
         {
-            if(tree.Count == 0)
+            Console.WriteLine("Enter Root element");
+            root = new Node(data);
+        }
+
+        public void addElement(int data, Node next = null)
+        {
+            if (root == null)
             {
-                tree.Add(new Node(data));
+                root = new Node(data);
                 Console.WriteLine("Element added: " + data);
             }
             else
             {
-                Node n = tree[c];
-                if (n.getData() > data && n.getLeft() == null)
+                if (next == null)
                 {
-                    tree.Add(new Node(data));
+                    next = root;
+                }
+
+                Node n = next;
+                if (n.getData() >= data && n.getLeft() == null)
+                {
+                    n.setLeft(new Node(data));
                     Console.WriteLine("Element added: " + data);
                 }
                 else if (n.getData() < data && n.getRight() == null)
                 {
-                    tree.Add(null);
-                    tree.Add(new Node(data));
-                    Console.WriteLine("Element added: "+ data);
+                    n.setRight(new Node(data));
+                    Console.WriteLine("Element added: " + data);
                 }
-                else
+                else if (n.getData() >= data)
                 {
-                    c++;
-                    addElement(data);
+                    addElement(data, n.getLeft());
+                }
+                else if (n.getData() < data)
+                {
+                    addElement(data, n.getRight());
                 }
             }
         }
-
-        
     }
 }

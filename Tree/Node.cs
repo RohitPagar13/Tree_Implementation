@@ -16,9 +16,9 @@ namespace Tree
         {
             left = null;
             right = null;
-            this.data = data;  
+            this.data = data;
         }
-        
+
         public Node getLeft()
         {
             return left;
@@ -32,6 +32,15 @@ namespace Tree
         public int getData()
         {
             return data;
+        }
+
+        public void setLeft(Node left)
+        {
+            this.left = left;
+        }
+        public void setRight(Node right)
+        {
+            this.right = right;
         }
     }
 }

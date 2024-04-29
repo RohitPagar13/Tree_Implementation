@@ -11,7 +11,7 @@
             Tree t = new Tree(Convert.ToInt32(Console.ReadLine()));
             while (true)
             {
-                Console.WriteLine("\nWhat you want to do?\n1: Add Element\n2: Inorder of Tree\n0: Exit");
+                Console.WriteLine("\nWhat you want to do?\n1: Add Element\n2: Inorder of Tree \n3: Pre-Order of Tree\n0: Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 if (choice == 0)
                 {
@@ -33,6 +33,10 @@
                             t.Inorder(t.getRoot());
                             break;
 
+                        case 3:
+                            Console.WriteLine("\nPreorder of Tree is: ");
+                            t.Preorder(t.getRoot());
+                            break;
                     }
                 }
             }

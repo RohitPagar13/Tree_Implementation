@@ -76,5 +76,23 @@ namespace Tree
             }
         }
 
+        public void Preorder(Node next)
+        {
+            if (root == null)
+            {
+                Console.WriteLine("No element inn the list");
+            }
+            else
+            {
+                if (next == null)
+                {
+                    return;
+                }
+                Console.Write(next.getData() + " -- ");
+                Preorder(next.getLeft());
+                Preorder(next.getRight());
+            }
+        }
+
     }
 }

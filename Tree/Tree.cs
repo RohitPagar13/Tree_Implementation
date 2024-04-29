@@ -57,5 +57,24 @@ namespace Tree
                 }
             }
         }
+
+        public void Inorder(Node next)
+        {
+            if (root == null)
+            {
+                Console.WriteLine("No element inn the list");
+            }
+            else
+            {
+                if (next == null)
+                {
+                    return;
+                }
+                Inorder(next.getLeft());
+                Console.Write(next.getData() + " -- ");
+                Inorder(next.getRight());
+            }
+        }
+
     }
 }

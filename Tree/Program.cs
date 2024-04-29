@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to the Tree Structure");
 
-            Console.WriteLine("Enter Root element");
+            Console.WriteLine("\nEnter Root element");
 
             Tree t = new Tree(Convert.ToInt32(Console.ReadLine()));
             while (true)
@@ -23,10 +23,16 @@
                     switch (choice)
                     {
                         case 1:
-                            Console.WriteLine("Enter data to add");
+                            Console.WriteLine("\nEnter data to add");
                             int data = Convert.ToInt32(Console.ReadLine());
                             t.addElement(data, t.getRoot());
                             break;
+
+                        case 2:
+                            Console.WriteLine("\nInorder of Tree is: ");
+                            t.Inorder(t.getRoot());
+                            break;
+
                     }
                 }
             }

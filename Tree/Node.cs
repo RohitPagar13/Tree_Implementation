@@ -36,11 +36,8 @@ namespace Tree
 
         public void setLeft(Node left)
         {
-<<<<<<< HEAD
-            this.left=left;
-=======
+
             this.left = left;
->>>>>>> 4_PostOrder
         }
         public void setRight(Node right)
         {

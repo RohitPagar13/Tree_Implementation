@@ -20,9 +20,6 @@ namespace Tree
         {
             Console.WriteLine("Enter Root element");
             root = new Node(data);
-<<<<<<< HEAD
-        }
-=======
         }
 
         public void addElement(int data, Node next = null)
@@ -115,7 +112,5 @@ namespace Tree
                 Console.Write(next.getData() + " -- ");
             }
         }
-
->>>>>>> 4_PostOrder
     }
 }

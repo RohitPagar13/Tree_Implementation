@@ -94,5 +94,24 @@ namespace Tree
             }
         }
 
+        public void Postorder(Node next)
+        {
+            if (root == null)
+            {
+                Console.WriteLine("No element in the list");
+            }
+            else
+            {
+                if (next == null)
+                {
+                    return;
+                }
+
+                Postorder(next.getLeft());
+                Postorder(next.getRight());
+                Console.Write(next.getData() + " -- ");
+            }
+        }
+
     }
 }

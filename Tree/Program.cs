@@ -1,4 +1,6 @@
-﻿namespace Tree
+﻿using System.Linq.Expressions;
+
+namespace Tree
 {
     internal class Program
     {
@@ -11,7 +13,7 @@
             Tree t = new Tree(Convert.ToInt32(Console.ReadLine()));
             while (true)
             {
-                Console.WriteLine("\nWhat you want to do?\n1: Add Element\n2: Inorder of Tree \n3: Pre-Order of Tree\n0: Exit");
+                Console.WriteLine("\nWhat you want to do?\n1: Add Element\n2: Inorder of Tree \n3: Pre-Order of Tree \n4: Post-order of Tree\n0: Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 if (choice == 0)
                 {
@@ -36,6 +38,11 @@
                         case 3:
                             Console.WriteLine("\nPreorder of Tree is: ");
                             t.Preorder(t.getRoot());
+                            break;
+
+                       case 4:
+                            Console.WriteLine("\nPostorder of Tree is: ");
+                            t.Postorder(t.getRoot());
                             break;
                     }
                 }

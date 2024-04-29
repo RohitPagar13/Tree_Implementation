@@ -5,10 +5,13 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Tree Structure");
-            Tree t = new Tree();
+
+            Console.WriteLine("Enter Root element");
+
+            Tree t = new Tree(Convert.ToInt32(Console.ReadLine()));
             while (true)
             {
-                Console.WriteLine("\nWhat you want to do?\n1: Add Element\n0: Exit");
+                Console.WriteLine("\nWhat you want to do?\n1: Add Element\n2: Inorder of Tree\n0: Exit");
                 int choice= Convert.ToInt32(Console.ReadLine());
                 if (choice == 0)
                 {
@@ -22,18 +25,8 @@
                         case 1:
                             Console.WriteLine("Enter data to add");
                             int data= Convert.ToInt32(Console.ReadLine());
-                            t.addElement(data);
+                            t.addElement(data,t.getRoot());
                             break;
-
-                        case 2:
-
-                            break;
-
-                        case 3:
-
-                            break;
-
-
                     }
                 }
             }

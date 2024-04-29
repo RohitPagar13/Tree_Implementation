@@ -33,5 +33,14 @@ namespace Tree
         {
             return data;
         }
+
+        public void setLeft(Node left)
+        {
+            this.left=left;
+        }
+        public void setRight(Node right)
+        {
+            this.right = right;
+        }
     }
 }
